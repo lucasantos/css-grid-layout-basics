@@ -1,0 +1,95 @@
+.container {
+    display: grid;
+    grid-template-columns: [inicio] 150px [f-primaria i-principal] 700px [f-principal i-secundaria] 150px [fim];
+    grid-template-rows: [inicio] 60px [f-topo i-menu] 40px [f-menu i-3col] 200px [f-3col i-rodape] 60px [fim];
+    grid-gap: 5px 10px;
+}
+
+.header {
+    /* Sintaxe com quatro declarações de posicionamento */
+    /* grid-column-start: inicio;
+    grid-column-end: fim;
+    grid-row-start: inicio;
+    grid-row-end: f-topo; */
+
+    /* Sintaxe com 2 declarações de posicionamento */
+    /* grid-column: inicio / fim;
+    grid-row: inicio / f-topo; */
+
+    /* Sintaxe com declaração única de posicionamento */
+    grid-area: inicio / inicio / f-topo / fim;
+
+    background-color: gray;
+}
+
+.menu {
+    /* grid-column-start: inicio;
+    grid-column-end: fim;
+    grid-row-start: i-menu;
+    grid-row-end: f-menu; */
+
+    /* grid-column: inicio / fim;
+    grid-row: i-menu / f-menu; */
+
+    grid-area: i-menu / inicio / f-menu / fim;
+
+    background-color: whitesmoke;
+}
+
+.main {
+    /* grid-column-start: i-principal;
+    grid-column-end: f-principal;
+    grid-row-start: i-3col;
+    grid-row-end: f-3col; */
+
+    /* grid-column: i-principal / f-principal;
+    grid-row: i-3col / f-3col; */
+
+    grid-area: i-3col / i-principal / f-3col / f-principal;
+
+    background-color: darkgray;
+}
+
+.sidebar-left {
+    /* grid-column-start: inicio;
+    grid-column-end: f-primaria;
+    grid-row-start: i-3col;
+    grid-row-end: f-3col; */
+
+    /* grid-column: inicio / f-primaria;
+    grid-row: i-3col / f-3col; */
+
+    grid-area: i-3col / inicio / f-3col / f-primaria;
+
+    background-color: lightgrey;
+}
+
+.sidebar-right {
+    /* grid-column-start: i-secundaria;
+    grid-column-end: fim;
+    grid-row-start: i-3col;
+    grid-row-end: f-3col; */
+
+    /* grid-column: i-secundaria / fim;
+    grid-row: i-3col / f-3col; */
+
+    grid-area: i-3col / i-secundaria / f-3col / fim;
+
+    background-color: lightgrey;
+}
+
+.footer {
+    /* grid-column-start: inicio;
+    grid-column-end: fim;
+    grid-row-start: i-rodape;
+    grid-row-end: fim; */
+
+    /* grid-column: inicio / fim;
+    grid-row: i-rodape / fim; */
+
+    grid-area: i-rodape / inicio / fim / fim;
+
+    background-color: gray;
+}
+
+/* Grid line nomeada */
